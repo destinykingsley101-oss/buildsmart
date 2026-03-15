@@ -138,6 +138,92 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;align
   footer{padding:1.5rem 1.25rem}.done-sc{font-size:4rem}
   .face{padding:2rem 1.5rem}
 }
+
+/* EXAM PRACTICE */
+.exam-s{max-width:720px;margin:0 auto 5rem;padding:0 2rem;animation:fadeUp .7s .25s ease both}
+.exam-intro{border:1px solid var(--border2);background:var(--cream2);padding:2.5rem;text-align:center;margin-bottom:2rem}
+.exam-intro-ey{font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.exam-intro-title{font-family:var(--serif);font-size:2rem;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:.75rem}
+.exam-intro-sub{font-size:.72rem;font-weight:300;letter-spacing:.06em;color:var(--ink3);line-height:2;margin-bottom:1.5rem}
+.exam-cat-sel{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:1.5rem}
+.exam-cat-btn{background:transparent;border:1px solid var(--border2);color:var(--ink3);font-family:var(--sans);font-size:.6rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;padding:.45rem 1rem;cursor:pointer;transition:all .2s}
+.exam-cat-btn.sel{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.btn-start-exam{background:var(--ink);color:var(--cream);border:1px solid var(--ink);font-family:var(--sans);font-size:.6rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;padding:.9rem 2.5rem;cursor:pointer;transition:all .2s}
+.btn-start-exam:hover{background:var(--ink2)}
+.exam-q-wrap{display:none}
+.exam-q-box{border:1px solid var(--border2);background:var(--ink);padding:2rem 2.5rem;margin-bottom:0}
+.exam-q-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem}
+.exam-q-cat{font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,170,110,.6)}
+.exam-q-num{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.exam-q-text{font-family:var(--serif);font-size:1.4rem;font-weight:300;font-style:italic;line-height:1.5;color:var(--cream)}
+.exam-marks{display:inline-block;margin-top:1rem;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l);border:1px solid rgba(196,164,107,.3);padding:.3rem .8rem}
+.exam-ans-box{border:1px solid var(--border2);border-top:none;background:var(--cream2);padding:1.5rem 2rem}
+.exam-ans-label{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink4);margin-bottom:.75rem}
+.exam-textarea{width:100%;min-height:160px;background:var(--cream);border:1px solid var(--border2);font-family:var(--serif);font-size:1rem;font-weight:300;color:var(--ink);padding:1rem;resize:vertical;outline:none;transition:border-color .2s;line-height:1.7}
+.exam-textarea:focus{border-color:var(--gold)}
+.exam-timer{font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--ink3);text-align:center;margin:.75rem 0;letter-spacing:.05em}
+.exam-timer.warn{color:var(--review)}
+.exam-ctrls{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;gap:12px}
+.btn-reveal{background:var(--ink);color:var(--cream);border:1px solid var(--ink);font-family:var(--sans);font-size:.6rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;padding:.8rem 2rem;cursor:pointer;transition:all .2s}
+.btn-reveal:hover{background:var(--ink2)}
+.btn-skip{background:transparent;border:1px solid var(--border2);color:var(--ink3);font-family:var(--sans);font-size:.6rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;padding:.8rem 1.5rem;cursor:pointer;transition:all .2s}
+.btn-skip:hover{background:var(--cream3)}
+.exam-model{display:none;border:1px solid var(--border2);border-top:none;background:var(--cream);padding:1.5rem 2rem}
+.exam-model-ey{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.exam-model-text{font-family:var(--serif);font-size:1rem;font-weight:300;line-height:1.8;color:var(--ink2);margin-bottom:1.25rem}
+.exam-model-pts{margin-bottom:1.25rem}
+.exam-model-pt{display:flex;gap:10px;align-items:flex-start;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.78rem;color:var(--ink3);font-weight:300;line-height:1.6}
+.exam-model-pt:last-child{border-bottom:none}
+.exam-model-pt-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px}
+.self-mark{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border2)}
+.self-mark-label{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink4);margin-bottom:.75rem}
+.mark-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mark-btn{flex:1;min-width:80px;padding:.7rem;border:1px solid var(--border2);background:transparent;font-family:var(--sans);font-size:.62rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:all .2s;color:var(--ink3)}
+.mark-btn:hover{background:var(--cream2)}
+.mark-btn.strong{border-color:rgba(58,107,74,.4);color:var(--know)}
+.mark-btn.strong:hover{background:var(--know-bg)}
+.mark-btn.partial{border-color:rgba(138,108,58,.4);color:var(--gold)}
+.mark-btn.partial:hover{background:rgba(138,108,58,.08)}
+.mark-btn.weak{border-color:rgba(138,74,42,.4);color:var(--review)}
+.mark-btn.weak:hover{background:var(--review-bg)}
+.exam-next-ctrls{display:flex;gap:10px;justify-content:flex-end;margin-top:1.25rem}
+.exam-prog-bar{height:2px;background:var(--border2);margin-bottom:1.5rem}
+.exam-prog-fill{height:100%;background:var(--gold);transition:width .4s ease}
+.exam-score-box{display:none;border:1px solid var(--border2);background:var(--cream2);padding:3rem 2rem;text-align:center}
+.exam-score-ey{font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.exam-score-num{font-family:var(--serif);font-size:5rem;font-weight:300;color:var(--ink);line-height:1;margin-bottom:.25rem}
+.exam-score-sub{font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink4);margin-bottom:2rem}
+.exam-score-rule{width:38px;height:1px;background:var(--gold);margin:0 auto 1.5rem}
+.exam-score-msg{font-family:var(--serif);font-size:1.5rem;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:.75rem}
+.exam-score-detail{font-size:.72rem;color:var(--ink3);line-height:2;font-weight:300;margin-bottom:2rem}
+.exam-breakdown{display:flex;gap:0;border:1px solid var(--border);margin-bottom:2rem}
+.exam-bd-item{flex:1;padding:1rem;text-align:center;border-right:1px solid var(--border)}
+.exam-bd-item:last-child{border-right:none}
+.exam-bd-num{font-family:var(--serif);font-size:1.8rem;font-weight:300;line-height:1}
+.exam-bd-lbl{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink4);margin-top:4px}
+.exam-bd-item.strong .exam-bd-num{color:var(--know)}
+.exam-bd-item.partial .exam-bd-num{color:var(--gold)}
+.exam-bd-item.weak .exam-bd-num{color:var(--review)}
+@media(max-width:600px){
+  .exam-s{padding:0 1rem}
+  .exam-q-text{font-size:1.15rem}
+  .exam-breakdown{flex-direction:column}
+  .exam-bd-item{border-right:none;border-bottom:1px solid var(--border)}
+}
+
+/* VIDEO SECTION */
+.vid-s{max-width:880px;margin:0 auto 5rem;padding:0 2rem;animation:fadeUp .7s .3s ease both}
+.vid-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border:1px solid var(--border)}
+.vid-card{padding:1.75rem 1.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);cursor:pointer;transition:background .2s;text-decoration:none;display:block}
+.vid-card:nth-child(3n){border-right:none}
+.vid-card:hover{background:var(--cream2)}
+.vid-card-topic{font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.vid-card-title{font-family:var(--serif);font-size:1.05rem;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:.5rem;line-height:1.4}
+.vid-card-desc{font-size:.68rem;font-weight:300;color:var(--ink3);line-height:1.7;margin-bottom:.75rem}
+.vid-card-btn{display:inline-flex;align-items:center;gap:6px;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(138,108,58,.3);padding-bottom:2px;transition:border-color .2s}
+.vid-card:hover .vid-card-btn{border-bottom-color:var(--gold)}
+.vid-card-btn-arrow{font-size:.7rem}
+@media(max-width:600px){.vid-s{padding:0 1rem}.vid-card:nth-child(3n){border-right:1px solid var(--border)}.vid-card:nth-child(2n){border-right:none}}
 </style>
 </head>
 <body>
@@ -159,6 +245,8 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;align
   <div class="nav-ls">
     <a class="nav-a" href="#study">Study</a>
     <a class="nav-a" href="#cats">Categories</a>
+    <a class="nav-a" href="#exam" id="nav-exam">Exam Practice</a>
+    <a class="nav-a" href="#videos">Videos</a>
   </div>
 </nav>
 
@@ -168,7 +256,7 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;align
   <div class="hero-rule"></div>
   <p class="hero-sub">Master the key concepts for construction procurement<br>Flip, test yourself, and track your progress</p>
   <div class="stats">
-    <div class="stat"><div class="stat-num" id="tc">25</div><div class="stat-lb">Flashcards</div></div>
+    <div class="stat"><div class="stat-num" id="tc">60</div><div class="stat-lb">Flashcards</div></div>
     <div class="stat"><div class="stat-num">4</div><div class="stat-lb">Categories</div></div>
     <div class="stat"><div class="stat-num">~10</div><div class="stat-lb">Minutes</div></div>
   </div>
@@ -177,10 +265,19 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;align
 <div class="filter-bar">
   <div class="filter-tag">Filter</div>
   <button class="filter-btn active" data-cat="All" onclick="fc(this)">All</button>
-  <button class="filter-btn" data-cat="Procurement basics" onclick="fc(this)">Basics</button>
-  <button class="filter-btn" data-cat="Procurement routes" onclick="fc(this)">Routes</button>
-  <button class="filter-btn" data-cat="Contract types" onclick="fc(this)">Contracts</button>
-  <button class="filter-btn" data-cat="Administration" onclick="fc(this)">Administration</button>
+  <button class="filter-btn" data-cat="Contractual Damages" onclick="fc(this)">Damages</button>
+  <button class="filter-btn" data-cat="Retention" onclick="fc(this)">Retention</button>
+  <button class="filter-btn" data-cat="Contract Administrator" onclick="fc(this)">CA / PM</button>
+  <button class="filter-btn" data-cat="NEC4 Option C — Target Cost" onclick="fc(this)">NEC4 Option C</button>
+  <button class="filter-btn" data-cat="Procurement Routes" onclick="fc(this)">Routes</button>
+  <button class="filter-btn" data-cat="Framework Agreements" onclick="fc(this)">Frameworks</button>
+  <button class="filter-btn" data-cat="Variations & Changes" onclick="fc(this)">Variations</button>
+  <button class="filter-btn" data-cat="JCT Payments & Valuations" onclick="fc(this)">JCT Payments</button>
+  <button class="filter-btn" data-cat="Defects" onclick="fc(this)">Defects</button>
+  <button class="filter-btn" data-cat="Tender Evaluation" onclick="fc(this)">Tendering</button>
+  <button class="filter-btn" data-cat="Time & Programme" onclick="fc(this)">Time</button>
+  <button class="filter-btn" data-cat="FIDIC Contracts" onclick="fc(this)">FIDIC</button>
+  <button class="filter-btn" data-cat="Procurement Basics" onclick="fc(this)">Basics</button>
 </div>
 
 <div class="app" id="study">
@@ -196,7 +293,7 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;align
           <span class="c-tag" id="ctf"></span>
           <div class="c-type">Question</div>
           <div class="card-q" id="fq"></div>
-          <div class="flip-hint">Tap to reveal</div>
+          <div class="flip-hint" id="fh">Tap to reveal</div>
         </div>
         <div class="face back">
           <span class="c-tag" id="ctb"></span>
@@ -235,6 +332,179 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;align
   <div class="cat-grid" id="cg"></div>
 </div>
 
+
+<!-- EXAM PRACTICE -->
+<div class="exam-s" id="exam">
+  <div class="section-eyebrow">Exam Practice</div>
+
+  <!-- INTRO / SETUP -->
+  <div class="exam-intro" id="exam-intro">
+    <div class="exam-intro-ey">Exam Preparation</div>
+    <div class="exam-intro-title">Test your knowledge</div>
+    <div class="exam-intro-sub">Answer questions in your own words, then compare against the model answer and mark yourself. Choose a category or practice all topics.</div>
+    <div class="exam-cat-sel" id="exam-cat-sel">
+      <button class="exam-cat-btn sel" data-ecat="All">All topics</button>
+    </div>
+    <button class="btn-start-exam" onclick="startExam()">Begin practice session</button>
+  </div>
+
+  <!-- QUESTION -->
+  <div class="exam-q-wrap" id="exam-q-wrap">
+    <div class="exam-prog-bar"><div class="exam-prog-fill" id="epf"></div></div>
+
+    <div class="exam-q-box">
+      <div class="exam-q-meta">
+        <span class="exam-q-cat" id="eq-cat"></span>
+        <span class="exam-q-num" id="eq-num"></span>
+      </div>
+      <div class="exam-q-text" id="eq-text"></div>
+      <div class="exam-marks" id="eq-marks"></div>
+    </div>
+
+    <div class="exam-ans-box">
+      <div class="exam-ans-label">Your answer</div>
+      <textarea class="exam-textarea" id="eq-textarea" placeholder="Write your answer here — aim for the key points you would include in an exam…"></textarea>
+      <div class="exam-timer" id="eq-timer">05:00</div>
+      <div class="exam-ctrls">
+        <button class="btn-skip" onclick="skipExamQ()">Skip →</button>
+        <button class="btn-reveal" onclick="revealModel()">Reveal model answer</button>
+      </div>
+    </div>
+
+    <!-- MODEL ANSWER -->
+    <div class="exam-model" id="exam-model">
+      <div class="exam-model-ey">Model answer — key points</div>
+      <div class="exam-model-text" id="em-text"></div>
+      <div class="exam-model-pts" id="em-pts"></div>
+      <div class="self-mark">
+        <div class="self-mark-label">How did you do?</div>
+        <div class="mark-btns">
+          <button class="mark-btn strong" onclick="markExam('strong')">Strong — covered all key points</button>
+          <button class="mark-btn partial" onclick="markExam('partial')">Partial — missed some points</button>
+          <button class="mark-btn weak" onclick="markExam('weak')">Weak — need to revisit this</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="exam-score-box" id="exam-score-box">
+    <div class="exam-score-ey">Session complete</div>
+    <div class="exam-score-num" id="esc-pct"></div>
+    <div class="exam-score-sub">Strong answers</div>
+    <div class="exam-score-rule"></div>
+    <div class="exam-score-msg" id="esc-msg"></div>
+    <div class="exam-score-detail" id="esc-detail"></div>
+    <div class="exam-breakdown">
+      <div class="exam-bd-item strong"><div class="exam-bd-num" id="esc-strong">0</div><div class="exam-bd-lbl">Strong</div></div>
+      <div class="exam-bd-item partial"><div class="exam-bd-num" id="esc-partial">0</div><div class="exam-bd-lbl">Partial</div></div>
+      <div class="exam-bd-item weak"><div class="exam-bd-num" id="esc-weak">0</div><div class="exam-bd-lbl">Weak</div></div>
+    </div>
+    <div class="done-btns">
+      <button class="btn-done primary" onclick="resetExam()">Practice again</button>
+      <button class="btn-done" onclick="resetExam('weak')">Drill weak topics</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- VIDEO SECTION -->
+<div class="vid-s" id="videos">
+  <div class="section-eyebrow">Video resources</div>
+  <div class="vid-grid">
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=liquidated+damages+construction+contract+UK+explained" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Contractual Damages</div>
+      <div class="vid-card-title">Liquidated Damages in Construction</div>
+      <div class="vid-card-desc">How LDs work, the penalty rule, and the procedure to deduct them under JCT and NEC4.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=construction+retention+money+explained+UK" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Retention</div>
+      <div class="vid-card-title">Retention Money in Construction</div>
+      <div class="vid-card-desc">Purpose, release mechanism, supply chain impact, and the ongoing reform debate.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=JCT+contract+administrator+role+explained" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Contract Administrator</div>
+      <div class="vid-card-title">The Contract Administrator Role</div>
+      <div class="vid-card-desc">Duties, powers, impartiality and how the CA differs from the NEC4 PM and FIDIC Engineer.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=NEC4+Option+C+target+cost+pain+gain+explained" target="_blank" rel="noopener">
+      <div class="vid-card-topic">NEC4 Option C</div>
+      <div class="vid-card-title">NEC4 Target Cost Contract</div>
+      <div class="vid-card-desc">How the pain/gain mechanism works, how to calculate contractor share, and why it is used.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=construction+procurement+routes+traditional+design+build+explained" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Procurement Routes</div>
+      <div class="vid-card-title">Construction Procurement Routes</div>
+      <div class="vid-card-desc">Traditional, design and build, management contracting — how to choose the right route.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=framework+agreement+construction+procurement+social+value" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Framework Agreements</div>
+      <div class="vid-card-title">Framework Agreements &amp; Social Value</div>
+      <div class="vid-card-desc">How frameworks work in public sector procurement, Social Value Act 2012, and collaborative models.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=JCT+contract+variations+change+orders+explained" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Variations &amp; Changes</div>
+      <div class="vid-card-title">Variations Under JCT &amp; NEC4</div>
+      <div class="vid-card-desc">How to instruct, value and manage variations — including compensation events under NEC4.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=JCT+interim+payment+valuation+retention+calculation" target="_blank" rel="noopener">
+      <div class="vid-card-topic">JCT Payments</div>
+      <div class="vid-card-title">JCT Interim Valuations &amp; Payments</div>
+      <div class="vid-card-desc">How to build up an interim valuation, apply retention, and calculate the net sum due.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=construction+defects+defects+liability+period+NEC4+JCT" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Defects</div>
+      <div class="vid-card-title">Defects &amp; Defects Liability Period</div>
+      <div class="vid-card-desc">How defects are managed under JCT and NEC4 after practical completion.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=construction+tender+evaluation+contractor+selection+MEAT" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Tender Evaluation</div>
+      <div class="vid-card-title">Tender Evaluation &amp; Contractor Selection</div>
+      <div class="vid-card-desc">How to evaluate tenders beyond lowest price — MEAT, pre-qualification, and scoring criteria.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=time+at+large+time+of+the+essence+construction+contract" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Time &amp; Programme</div>
+      <div class="vid-card-title">Time at Large &amp; Extension of Time</div>
+      <div class="vid-card-desc">Time is of the essence, time at large, and how NEC4 manages time through compensation events.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=FIDIC+Red+Book+Yellow+Book+construction+contract+explained" target="_blank" rel="noopener">
+      <div class="vid-card-topic">FIDIC Contracts</div>
+      <div class="vid-card-title">FIDIC Red, Yellow &amp; Silver Book</div>
+      <div class="vid-card-desc">The FIDIC rainbow suite explained — which book to use and how the Engineer role works.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=NEC4+vs+JCT+vs+FIDIC+construction+contracts+differences" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Contract Comparison</div>
+      <div class="vid-card-title">NEC4 vs JCT vs FIDIC Compared</div>
+      <div class="vid-card-desc">Side-by-side comparison of the three main UK and international standard forms of contract.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=NEC4+compensation+events+early+warning+notice+explained" target="_blank" rel="noopener">
+      <div class="vid-card-topic">NEC4 Basics</div>
+      <div class="vid-card-title">NEC4 Compensation Events &amp; Early Warnings</div>
+      <div class="vid-card-desc">How compensation events and early warning notices work — the 8-week rule and quotation process.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+    <a class="vid-card" href="https://www.youtube.com/results?search_query=practical+completion+construction+contract+JCT+meaning" target="_blank" rel="noopener">
+      <div class="vid-card-topic">Procurement Basics</div>
+      <div class="vid-card-title">Practical Completion Explained</div>
+      <div class="vid-card-desc">What practical completion means, its legal consequences, and how it is certified under JCT.</div>
+      <div class="vid-card-btn">Search on YouTube <span class="vid-card-btn-arrow">&#8599;</span></div>
+    </a>
+  </div>
+</div>
+
 <footer>
   <div class="foot-wm">BuildSmart</div>
   <div class="foot-tx">Construction Procurement &amp; Administration &copy; 2025</div>
@@ -242,31 +512,106 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;align
 
 <script>
 const C=[
-  {cat:"Procurement basics",q:"What is procurement in construction?",a:"The process of acquiring goods, services, and works needed to deliver a construction project — including sourcing, tendering, contracting, and purchasing."},
-  {cat:"Procurement basics",q:"What is a Bill of Quantities (BoQ)?",a:"A document listing all the materials, labour, and services required for a project, with quantities, used to price tenders consistently."},
-  {cat:"Procurement basics",q:"What is a tender?",a:"A formal invitation for contractors or suppliers to submit a priced proposal to carry out specified work or supply goods."},
-  {cat:"Procurement basics",q:"What is a framework agreement?",a:"A pre-agreed contract with one or more suppliers establishing terms for future orders, avoiding the need to re-tender every time."},
-  {cat:"Procurement basics",q:"What is a pre-qualification questionnaire (PQQ)?",a:"A document used to assess a contractor's suitability before inviting them to tender, covering financial standing, experience, and capability."},
-  {cat:"Procurement routes",q:"What is traditional (design-bid-build) procurement?",a:"The client appoints a designer first, then separately tenders construction work. Design is complete before building starts."},
-  {cat:"Procurement routes",q:"What is design and build (D&B) procurement?",a:"A single contractor takes responsibility for both design and construction under one contract, giving the client a single point of responsibility."},
-  {cat:"Procurement routes",q:"What is management contracting?",a:"A management contractor is paid a fee to manage and coordinate work packages carried out by trade contractors, with the client holding the risk."},
-  {cat:"Procurement routes",q:"What is a PFI/PPP contract?",a:"Private Finance Initiative / Public-Private Partnership — a long-term arrangement where a private entity finances, builds, and operates a facility for a public client."},
-  {cat:"Procurement routes",q:"What is construction management procurement?",a:"The client directly employs trade contractors and appoints a construction manager (for a fee) to coordinate and manage them, retaining more control."},
-  {cat:"Contract types",q:"What is a lump sum contract?",a:"The contractor agrees to complete the work for a fixed total price. Variations can adjust the final amount."},
-  {cat:"Contract types",q:"What is a cost-plus (reimbursable) contract?",a:"The client pays the contractor's actual costs plus an agreed fee or percentage for profit and overhead."},
-  {cat:"Contract types",q:"What is a GMP contract?",a:"Guaranteed Maximum Price — the contractor takes on cost risk above an agreed ceiling but shares savings if costs come in under it."},
-  {cat:"Contract types",q:"What is a measured (remeasurement) contract?",a:"Work is paid based on actual quantities measured on completion, using agreed rates — common where scope is uncertain at tender."},
-  {cat:"Contract types",q:"What is a target cost contract?",a:"A contract where a target price is set and any over- or under-spend is shared between client and contractor using an agreed pain/gain mechanism."},
-  {cat:"Administration",q:"What is a contract administrator (CA)?",a:"The person (often an architect or engineer) appointed to administer the building contract on behalf of the client — issuing instructions, certificates, and decisions."},
-  {cat:"Administration",q:"What is a variation (or change order)?",a:"An authorised change to the scope, specification, or sequence of works after the contract is signed, which may adjust cost and programme."},
-  {cat:"Administration",q:"What is a valuation in construction?",a:"An assessment of the value of work completed (and materials on site) at a given date, used to calculate interim payments."},
-  {cat:"Administration",q:"What is practical completion (PC)?",a:"The stage when the works are complete for their intended purpose, defects are minor only, and the client takes possession. It triggers key contract events."},
-  {cat:"Administration",q:"What is a defects liability period?",a:"A period after practical completion (typically 6-12 months) during which the contractor must return to fix defects that appear."},
-  {cat:"Administration",q:"What is retention money?",a:"A percentage withheld from each payment to the contractor (typically 3-5%) as security against defects, released after PC and end of the defects period."},
-  {cat:"Administration",q:"What is a performance bond?",a:"A guarantee from a third party (usually an insurer or bank) to pay the client a sum if the contractor fails to perform."},
-  {cat:"Administration",q:"What does 'novation' mean in construction?",a:"The transfer of a contract (commonly a designer's appointment) from one party to another — e.g. from client to contractor in a D&B project."},
-  {cat:"Administration",q:"What is liquidated damages (LDs)?",a:"A pre-agreed daily or weekly sum the contractor pays to the client for failing to complete by the contract completion date."},
-  {cat:"Administration",q:"What is an extension of time (EoT)?",a:"A formal mechanism granting the contractor additional time to complete the works due to qualifying events such as client-caused delays or force majeure."}
+  // CONTRACTUAL DAMAGES
+  {cat:"Contractual Damages",q:"What is the purpose of contractual damages?",a:"To compensate the innocent party for losses suffered due to a breach of contract. They aim to put the innocent party in the position they would have been in had the breach not occurred — not to penalise the defaulting party."},
+  {cat:"Contractual Damages",q:"What is the difference between liquidated damages (LDs) and unliquidated damages?",a:"Liquidated damages are a pre-agreed sum stated in the contract (e.g. per week of delay). Unliquidated damages are not pre-agreed and must be proven and assessed by the courts after the breach."},
+  {cat:"Contractual Damages",q:"What procedure must be followed before LDs can be deducted under JCT?",a:"1) A non-completion certificate must be issued by the CA. 2) The client must give written notice of intent to deduct LDs. 3) The client may then deduct or recover the stated rate — the CA cannot do this unilaterally."},
+  {cat:"Contractual Damages",q:"What is a non-completion certificate under JCT?",a:"A certificate issued by the Contract Administrator confirming the contractor has failed to complete the works by the completion date (or any extended date). It is a prerequisite to deducting liquidated damages."},
+  {cat:"Contractual Damages",q:"What is the penalty rule in relation to LDs?",a:"Liquidated damages must be a genuine pre-estimate of loss, not a penalty. If they are found to be a penalty clause, they may be unenforceable. Recent case law (Cavendish v Makdessi) widened this test to include legitimate business interests."},
+  {cat:"Contractual Damages",q:"What happens to LDs if an extension of time is granted?",a:"The completion date moves forward, reducing or eliminating the period for which LDs are owed. If the delay is caused by the client, LDs may not be deductible and time may be set 'at large'."},
+  {cat:"Contractual Damages",q:"What is 'time at large' in construction contracts?",a:"Where no valid completion date exists (e.g. because the client caused delay but no EoT mechanism was used), the contractor's only obligation is to complete within a 'reasonable time'. LDs cannot be deducted."},
+  {cat:"Contractual Damages",q:"What does 'time is of the essence' mean in construction contracts?",a:"It means the completion date is a fundamental contractual term. Failure to meet it entitles the innocent party to treat the contract as repudiated. Standard forms rarely make time of the essence — they use LDs instead."},
+
+  // RETENTION
+  {cat:"Retention",q:"What is the purpose of retention in construction contracts?",a:"Retention is a sum withheld from interim payments (typically 3-5%) as security against the contractor's failure to complete or rectify defects. It incentivises completion and defect rectification."},
+  {cat:"Retention",q:"How is retention typically split and released under JCT?",a:"Half is released at practical completion; the remaining half is released at the end of the defects liability period (after the Certificate of Making Good is issued)."},
+  {cat:"Retention",q:"What are the advantages of retention to the client?",a:"Provides financial security; incentivises the contractor to return and fix defects; reduces risk of contractor insolvency leaving defects unresolved; promotes completion on time."},
+  {cat:"Retention",q:"What are the disadvantages of retention to the contractor/subcontractor?",a:"Cash flow is restricted; money is tied up that could be reinvested; risk of client insolvency means retention may never be released; small subcontractors are disproportionately affected."},
+  {cat:"Retention",q:"What is the ongoing debate about retention reform in the UK?",a:"The Aldous Bill and subsequent consultations have proposed abolishing cash retention and replacing it with retention deposit schemes or trust accounts to protect subcontractors from client insolvency."},
+  {cat:"Retention",q:"How does retention operate within the supply chain?",a:"Main contractors withhold retention from subcontractors mirroring the main contract terms. This cascades down the supply chain, meaning smaller firms at the bottom are most exposed to cash flow impact."},
+
+  // CONTRACT ADMINISTRATOR
+  {cat:"Contract Administrator",q:"What is the role of the Contract Administrator (CA) under JCT?",a:"The CA administers the building contract on behalf of the client — issuing instructions, certificates, and decisions. They must act independently and impartially between client and contractor when making decisions."},
+  {cat:"Contract Administrator",q:"What are the key duties of the CA under JCT SBC/Q 2016?",a:"Issuing instructions (variations, postponement, removal of work); issuing certificates (interim payment, practical completion, non-completion, making good); granting extensions of time; assessing loss and expense claims."},
+  {cat:"Contract Administrator",q:"What is the equivalent of a CA in the NEC4 contract?",a:"The Project Manager (PM). Unlike the CA, the NEC4 PM acts in the client's interest rather than independently — though they must act in a spirit of mutual trust and co-operation."},
+  {cat:"Contract Administrator",q:"What is the equivalent of a CA in the FIDIC contract?",a:"The Engineer (or Project Engineer). Under FIDIC, the Engineer acts for the employer but must make certain decisions fairly and independently, similar to the CA role."},
+  {cat:"Contract Administrator",q:"What are the similarities between the CA, NEC4 PM, and FIDIC Engineer?",a:"All three administer the contract, issue instructions, certify payments, assess time extensions, and manage variations. All are central to contract administration and communication between parties."},
+  {cat:"Contract Administrator",q:"What are the key differences between the CA, NEC4 PM, and FIDIC Engineer?",a:"CA (JCT) acts independently/impartially. NEC4 PM acts in the client's interest but collaboratively. FIDIC Engineer acts for the employer but must make fair determinations. The NEC4 approach is the most collaborative."},
+  {cat:"Contract Administrator",q:"What is the NEC4 Supervisor's role?",a:"The Supervisor monitors quality and compliance with the Works Information on site. They check materials and workmanship, notify defects, and issue the Defects Certificate — separate from the PM's role."},
+
+  // NEC4 OPTION C - TARGET COST
+  {cat:"NEC4 Option C — Target Cost",q:"What is NEC4 Option C (Target Cost)?",a:"A cost-reimbursable contract where the contractor is paid their actual Defined Cost plus a fee, but compared against a target price. Any difference (saving or overspend) is shared between client and contractor using agreed pain/gain percentages."},
+  {cat:"NEC4 Option C — Target Cost",q:"What is the 'pain/gain' mechanism in NEC4 Option C?",a:"If final costs come in under the target (gain), the saving is shared between client and contractor. If costs exceed the target (pain), the overspend is shared. Percentages are set in the Contract Data."},
+  {cat:"NEC4 Option C — Target Cost",q:"What is the 'Total of the Prices' in NEC4 Option C?",a:"The target price — the agreed budget at contract award. It is adjusted for compensation events throughout the project to create the final target against which actual costs are compared."},
+  {cat:"NEC4 Option C — Target Cost",q:"What is the 'Price for Work Done to Date' (PWDD) in NEC4 Option C?",a:"The actual Defined Costs incurred by the contractor plus their fee. This is what is paid in interim applications — reimbursing actual cost rather than a fixed schedule of rates."},
+  {cat:"NEC4 Option C — Target Cost",q:"How do you calculate the contractor's share in NEC4 Option C?",a:"Compare final PWDD (actual cost) against final Total of the Prices (target). Apply the share percentages to the difference within each share range. If actual < target = gain (contractor receives share). If actual > target = pain (contractor pays share)."},
+  {cat:"NEC4 Option C — Target Cost",q:"What are the benefits of NEC4 Option C to the client?",a:"Encourages contractor to control costs (as they share pain); provides cost transparency; promotes collaboration; allows works to start before full design is complete; risk is shared rather than fully transferred."},
+  {cat:"NEC4 Option C — Target Cost",q:"What are the benefits of NEC4 Option C to the contractor?",a:"Actual costs are reimbursed so less financial risk than a lump sum; opportunity to earn a gain share if costs are controlled; encourages early involvement; promotes open-book accounting."},
+
+  // PROCUREMENT ROUTES
+  {cat:"Procurement Routes",q:"What are the key factors when choosing a procurement route?",a:"Time (speed to start/complete); cost certainty; design responsibility; contractor involvement; client experience; risk allocation; project complexity; flexibility for change; and in public sector — value for money and social value."},
+  {cat:"Procurement Routes",q:"Why might design and build be chosen for a fast-track project?",a:"D&B allows construction to overlap with design (fast-track). A single contractor holds design and build responsibility, reducing co-ordination issues. However, the client loses direct design control."},
+  {cat:"Procurement Routes",q:"Why might traditional procurement be unsuitable for urgent projects?",a:"In traditional procurement, design must be substantially complete before tendering, creating a sequential process. This increases overall programme duration compared to D&B or management contracting."},
+  {cat:"Procurement Routes",q:"What is a key disadvantage of design and build for clients? (Building, 2008)",a:"Clients typically pay a risk premium — contractors price the design risk into their tender, making D&B more expensive than traditional procurement. The client also loses direct control over design quality and specification."},
+  {cat:"Procurement Routes",q:"What procurement route best suits a client needing price certainty and speed?",a:"Design and Build — it offers a single contract sum with design and construction responsibility in one contractor, and allows construction to start before full design completion, reducing programme duration."},
+  {cat:"Procurement Routes",q:"What factors favour traditional procurement?",a:"Client wants design control and quality; design is complex or innovative; client has an experienced professional team; programme is not time-critical; accurate BoQ can be produced before tender."},
+  {cat:"Procurement Routes",q:"What is management contracting and when is it appropriate?",a:"The management contractor is paid a fee to manage trade contractors. Suitable for complex, large-scale projects where early start is needed and the scope is not fully defined. The client retains more risk."},
+
+  // FRAMEWORK AGREEMENTS & COLLABORATIVE PROCUREMENT
+  {cat:"Framework Agreements",q:"What is a framework agreement in construction procurement?",a:"A long-term arrangement with pre-selected contractors/consultants where terms and conditions (often including rates) are pre-agreed. Individual projects are called off under the framework without re-tendering."},
+  {cat:"Framework Agreements",q:"What are the advantages of framework agreements for public sector clients?",a:"Saves time and cost of repeated tendering; builds long-term relationships; allows continuous improvement; promotes social value; gives cost certainty through pre-agreed rates; speeds project delivery."},
+  {cat:"Framework Agreements",q:"What are the disadvantages of framework agreements?",a:"May reduce competition and value for money over time; risk of complacency by contractors; complex to set up; may not attract SMEs; requires active management to maintain performance standards."},
+  {cat:"Framework Agreements",q:"What is 'social value' in construction procurement?",a:"The wider benefits delivered by construction beyond the physical asset — including local employment, skills training, supply chain diversity, environmental sustainability, and community benefit. Required under the Social Value Act 2012 for public contracts."},
+  {cat:"Framework Agreements",q:"What is the Social Value Act 2012?",a:"Legislation requiring public bodies in England to consider how services can improve the economic, social, and environmental wellbeing of the area when procuring services. It drives a 'value-driven' procurement agenda."},
+  {cat:"Framework Agreements",q:"What is value-driven procurement?",a:"An approach that goes beyond lowest price to consider whole-life cost, social value, sustainability, innovation, and quality outcomes. It aligns with public sector duties under the Social Value Act and Procurement Act 2023."},
+  {cat:"Framework Agreements",q:"Compare framework agreements vs traditional competitive tendering for public sector value for money.",a:"Frameworks offer speed, relationship benefits, and social value but reduce competition. Traditional tendering maximises market competition but takes longer, costs more to run, and can be adversarial. Best value depends on project type and frequency."},
+
+  // VARIATIONS & CHANGE INSTRUCTIONS
+  {cat:"Variations & Changes",q:"What is a variation under JCT SBC/Q 2016?",a:"Clause 5 defines a variation as an alteration or modification of the design, quality, or quantity of the works; or the addition, omission, or substitution of any work. All variations must be instructed in writing by the CA."},
+  {cat:"Variations & Changes",q:"What should a contractor do when they receive a change instruction under JCT?",a:"1) Check the instruction is valid and in writing (or confirm oral instruction). 2) Comply with the instruction. 3) Submit a variation quotation or allow the QS to value it. 4) Notify if the change affects time — and apply for an EoT if needed."},
+  {cat:"Variations & Changes",q:"How are variations valued under JCT SBC/Q 2016?",a:"Using contract rates where applicable; if no applicable rate, a fair rate is agreed; if not agreed, the QS values using daywork or fair valuation. The contractor may submit a Schedule 2 Quotation for a variation before executing it."},
+  {cat:"Variations & Changes",q:"What is a compensation event under NEC4?",a:"An event that changes the Prices or the Completion Date — listed in Clause 60. The contractor notifies the PM within 8 weeks. The PM assesses or the contractor submits a quotation. Failure to notify on time can bar the claim."},
+  {cat:"Variations & Changes",q:"What is the '8-week rule' for compensation events under NEC4?",a:"Under NEC4 Clause 61.3, if the contractor does not notify a compensation event within 8 weeks of becoming aware of it, they are barred from changing the Prices or Completion Date — a significant 'use it or lose it' provision."},
+  {cat:"Variations & Changes",q:"What is an Early Warning Notice (EWN) under NEC4?",a:"A notice either party must give as soon as they become aware of any matter that could affect cost, time, or quality. Failure to give an EWN can reduce the contractor's entitlement on a subsequent compensation event."},
+
+  // JCT INTERIM PAYMENTS & VALUATIONS
+  {cat:"JCT Payments & Valuations",q:"What items are included in an interim valuation under JCT SBC/Q 2016?",a:"Measured work; variations; materials on site (and off site if applicable); loss and expense; fluctuations; contractor's design fees; less retention; less previously certified sums."},
+  {cat:"JCT Payments & Valuations",q:"How is retention calculated in a JCT interim valuation?",a:"The stated retention percentage (e.g. 3%) is applied to the gross valuation (excluding previously certified amounts). Half is released at practical completion; the remainder at end of the defects liability period."},
+  {cat:"JCT Payments & Valuations",q:"What is 'materials off site' under JCT SBC/Q 2016?",a:"Clause 4.17 allows payment for listed items not yet delivered to site if: ownership has passed to the contractor; items are uniquely identified; insured; and stored safely off site. Protects the client via bond or equivalent."},
+  {cat:"JCT Payments & Valuations",q:"What is loss and expense under JCT SBC/Q 2016?",a:"Compensation for direct loss and/or expense suffered by the contractor due to matters beyond their control — such as late information, variations, or client-caused disruption. Claimed under Clause 4.23 and assessed by the QS/CA."},
+  {cat:"JCT Payments & Valuations",q:"What is a Schedule 2 Quotation under JCT?",a:"A mechanism allowing the contractor to submit a lump sum price (including time and cost) for a proposed variation before it is instructed. Speeds up agreement on variation costs and avoids later disputes."},
+
+  // DEFECTS
+  {cat:"Defects",q:"What is a defect under NEC4?",a:"Under NEC4, a defect is defined as part of the works not in accordance with the Works Information, or a part of contractor-designed works not meeting the applicable law or the contractor's design. The Supervisor notifies defects."},
+  {cat:"Defects",q:"What is the Defects Certificate under NEC4?",a:"Issued by the Supervisor at the end of the defects correction period, confirming all notified defects have been corrected. It is the NEC4 equivalent of the Certificate of Making Good under JCT."},
+  {cat:"Defects",q:"What happens if a contractor does not correct a defect within the defects correction period under NEC4?",a:"The PM assesses the cost of having the defect corrected by others and the contractor pays this amount. Alternatively, the client and contractor may agree to accept the defect in exchange for a reduction in the Prices."},
+  {cat:"Defects",q:"What is the defects liability period under JCT?",a:"The period after practical completion (typically 6-12 months) during which the contractor must return to make good any defects that appear. At the end, the CA issues the Certificate of Making Good, triggering release of the second half of retention."},
+
+  // TENDER EVALUATION
+  {cat:"Tender Evaluation",q:"What factors should be considered when evaluating tenders?",a:"Price/cost; technical capability; programme; quality; health and safety record; financial standing; experience of similar projects; key personnel; supply chain; sustainability credentials; and social value."},
+  {cat:"Tender Evaluation",q:"What is the difference between lowest price and most economically advantageous tender (MEAT)?",a:"Lowest price selects purely on cost. MEAT (used in public procurement) considers a weighted combination of price, quality, time, sustainability, and social value — better reflecting whole-life value."},
+  {cat:"Tender Evaluation",q:"What is pre-qualification in the tender process?",a:"A stage before tendering where contractors demonstrate their suitability (financial standing, experience, H&S, insurance). Only those who pass are invited to tender — reducing risk for the client and wasted effort for unsuitable contractors."},
+  {cat:"Tender Evaluation",q:"What is single-stage vs two-stage tendering?",a:"Single-stage: contractors price a fully defined scheme. Two-stage: a preferred contractor is selected early (on overheads/profit and prelims) to develop the design collaboratively before agreeing a final contract sum — better for complex or fast-track projects."},
+
+  // TIME & PROGRAMME
+  {cat:"Time & Programme",q:"What is the difference between a Relevant Event and a Relevant Matter under JCT?",a:"A Relevant Event entitles the contractor to an extension of time only (Clause 2.29). A Relevant Matter also entitles the contractor to loss and expense (Clause 4.24). Some events (e.g. variations) are both; others (e.g. exceptionally adverse weather) are Relevant Events only."},
+  {cat:"Time & Programme",q:"What is 'exceptionally adverse weather' as a Relevant Event under JCT?",a:"Weather that is exceptional for the time of year and location — not merely bad. The contractor must demonstrate it was unforeseeable and caused delay to the critical path. It grants an EoT but not loss and expense."},
+  {cat:"Time & Programme",q:"What contractual tools does NEC4 provide for managing time?",a:"The Accepted Programme (updated regularly); early warning notices; compensation events (which adjust Completion Date); and the Contractor's design programme. The PM accepts or rejects the programme — rejection does not prevent work proceeding."},
+  {cat:"Time & Programme",q:"What is the Accepted Programme under NEC4?",a:"The contractor's programme accepted by the Project Manager. It must show planned completion, float, critical path, and resource/cost loading. It is used to assess compensation events and monitor progress. Updated at intervals stated in Contract Data."},
+
+  // FIDIC
+  {cat:"FIDIC Contracts",q:"What are the three main FIDIC contracts used in construction?",a:"Red Book (Conditions of Contract for Construction) — client-designed works. Yellow Book (Plant & Design-Build) — contractor designs. Orange Book (EPC/Turnkey) — contractor designs and builds to completion, taking most risk."},
+  {cat:"FIDIC Contracts",q:"What is the role of the Engineer under FIDIC Red Book?",a:"The Engineer acts for the employer but must make determinations fairly and independently when required (e.g. on claims). They issue instructions, certify payments, grant extensions, and manage the contract — similar to the JCT CA but with more explicit independence duties."},
+  {cat:"FIDIC Contracts",q:"What is a DAAB under FIDIC 2017?",a:"Dispute Avoidance/Adjudication Board — a standing panel (usually 1 or 3 members) that monitors the project and resolves disputes informally or by formal decision. Replaces the previous DAB. Decisions are temporarily binding pending arbitration."},
+
+  // PROCUREMENT BASICS
+  {cat:"Procurement Basics",q:"What is procurement in construction?",a:"The process of acquiring goods, services, and works needed to deliver a construction project — including sourcing, tendering, contracting, and purchasing."},
+  {cat:"Procurement Basics",q:"What is a Bill of Quantities (BoQ)?",a:"A document listing all the materials, labour, and services required for a project, with quantities, used to price tenders consistently across competing contractors."},
+  {cat:"Procurement Basics",q:"What is a pre-qualification questionnaire (PQQ)?",a:"A document used to assess a contractor's suitability before inviting them to tender, covering financial standing, relevant experience, H&S record, and capability."},
+  {cat:"Procurement Basics",q:"What is novation in construction?",a:"The transfer of a contract (commonly a designer's appointment) from one party to another — e.g. from client to contractor in a D&B project, so the contractor takes over the design team."},
+  {cat:"Procurement Basics",q:"What is practical completion (PC)?",a:"The stage when the works are complete for their intended purpose, with only minor defects outstanding. It triggers release of the first half of retention, start of the defects liability period, and transfer of insurance risk to the client."},
+  {cat:"Procurement Basics",q:"What is a performance bond?",a:"A guarantee from a third party (usually an insurer or bank) to pay the client a sum (typically 10% of contract value) if the contractor fails to perform or becomes insolvent."},
+  {cat:"Procurement Basics",q:"What is sectional completion?",a:"Where the contract is divided into sections, each with its own completion date and LDs rate. Allows the client to take possession of parts of the building before the whole works are complete."}
 ];
 
 let deck=[],idx=0,kn=0,rv=0,flip=false,af='All';
@@ -285,13 +630,25 @@ function ld(){
   document.getElementById('cc').textContent=(idx+1)+' / '+deck.length;
   document.getElementById('pf').style.width=(idx/deck.length*100)+'%';
   document.getElementById('pl').textContent=idx+' / '+deck.length;
-  document.getElementById('ci').classList.remove('flip');
+  document.getElementById('ci').classList.remove('flip');document.getElementById('fh').textContent='Tap to reveal';
   document.getElementById('bk').disabled=true;
   document.getElementById('br').disabled=true;
   flip=false;
 }
 
-function fl(){if(flip)return;document.getElementById('ci').classList.add('flip');document.getElementById('bk').disabled=false;document.getElementById('br').disabled=false;flip=true;}
+function fl(){
+  if(!flip){
+    document.getElementById('ci').classList.add('flip');document.getElementById('fh').textContent='Tap to go back';
+    document.getElementById('bk').disabled=false;
+    document.getElementById('br').disabled=false;
+    flip=true;
+  } else {
+    document.getElementById('ci').classList.remove('flip');document.getElementById('fh').textContent='Tap to reveal';
+    document.getElementById('bk').disabled=true;
+    document.getElementById('br').disabled=true;
+    flip=false;
+  }
+}
 
 function mk(t){
   if(!flip)return;
@@ -343,6 +700,172 @@ document.getElementById('gi').addEventListener('keydown',e=>{if(e.key==='Enter')
 if(sessionStorage.getItem('bs')==='1')document.getElementById('gate').classList.add('hidden');
 
 bcg();rst();
+
+
+// ── EXAM PRACTICE ──
+const EQ = [
+  {cat:"Contractual Damages", marks:25, q:"Outline the purpose of contractual damages, and how they are applied using contractual procedures.",
+   summary:"Damages compensate the innocent party for breach — not to punish. LDs are pre-agreed; unliquidated must be proven. Procedure: non-completion certificate → written notice → deduction.",
+   points:["Purpose: to put innocent party in position they would have been had breach not occurred","Liquidated damages = pre-agreed sum per week/day stated in contract","Must be a genuine pre-estimate of loss, not a penalty (penalty rule / Cavendish v Makdessi)","JCT procedure: (1) Non-completion certificate issued by CA; (2) Written notice from client to contractor; (3) Deduction from next payment or separate recovery","EoT granted = completion date moves, reducing or eliminating LDs period","If client causes delay without valid EoT mechanism: time at large — LDs cannot be deducted","Unliquidated damages: no pre-agreed sum, must be proven in court — loss must not be too remote (Hadley v Baxendale)"]},
+
+  {cat:"Retention", marks:25, q:"Explain the purposes of retentions and consider their advantages and disadvantages to the numerous stakeholders involved, using construction contracts to explain their administration within the supply chain.",
+   summary:"Retention is withheld (typically 3-5%) as security against defects. Released 50% at PC, 50% at end of DLP. Benefits the client but harms contractor cash flow — particularly subcontractors.",
+   points:["Purpose: security against contractor failure to complete or remedy defects; incentivises return during DLP","Typically 3-5% withheld from each interim payment","Under JCT: half released at PC; remainder after Certificate of Making Good Defects","Advantage to client: financial security, incentive to fix defects, protection against insolvency","Disadvantage to contractor: restricts cash flow; money cannot be reinvested; risk if client becomes insolvent","Supply chain cascade: main contractor withholds from subcontractors — SMEs most affected","Reform debate: Aldous Bill / retention deposit schemes / trust accounts proposed to protect subcontractors"]},
+
+  {cat:"Contract Administrator", marks:25, q:"Introduce and explain the role, responsibilities, duties, importance, and expectations of the contract administrator.",
+   summary:"The CA administers the JCT contract independently. Key duties: issue instructions, certify payments and completion, grant EoTs, assess L&E. Must act impartially.",
+   points:["CA appointed by client to administer the JCT building contract","Acts independently and impartially between client and contractor — not simply client's agent","Issues instructions: variations, postponement, removal of defective work, expenditure of provisional sums","Issues certificates: interim payment, practical completion, non-completion, making good defects, final certificate","Grants extensions of time for Relevant Events under Clause 2.29","Assesses loss and expense claims under Clause 4.23","Must act within the scope of the contract — cannot instruct beyond contract terms","Importance: central to contract administration, manages risk, ensures contractual compliance"]},
+
+  {cat:"Contract Administrator", marks:25, q:"Discuss the similarities and differences between the roles of Project Manager in NEC4, Contract Administrator in JCT, and Project Engineer in FIDIC.",
+   summary:"All three administer their contract, issue instructions, certify payments, manage time. Key difference: JCT CA acts independently; NEC4 PM acts for client but collaboratively; FIDIC Engineer acts for employer but must be fair.",
+   points:["All three: administer the contract, issue instructions/variations, certify payments, manage extensions of time","JCT CA: acts independently/impartially — must balance client and contractor interests when certifying","NEC4 PM: acts in the client's interest but within a spirit of mutual trust and co-operation (Clause 10.2)","NEC4 PM manages compensation events, accepts programmes, and gives early warnings","FIDIC Engineer: acts for the employer but must make fair and independent determinations on claims (Sub-Clause 3.5)","FIDIC Engineer has broader technical role — approves shop drawings, inspects works, issues Taking-Over Certificate","Key similarity: all are central communication hub between client and contractor"]},
+
+  {cat:"NEC4 Option C — Target Cost", marks:25, q:"Describe the way in which the NEC4 Option C target mechanism works, explain the benefits to each party, and calculate contractor share for given scenarios.",
+   summary:"Option C reimburses actual Defined Cost + fee, compared against a target (Total of Prices). Savings/overspends shared via pain/gain percentages. Benefits: cost transparency, shared risk, collaboration.",
+   points:["Contractor paid actual Defined Cost plus fee (PWDD) in interim payments — not a fixed price","At completion: actual PWDD compared to final Total of Prices (adjusted target)","If actual < target: saving shared — contractor receives gain share per agreed percentages","If actual > target: overspend shared — contractor bears pain share per agreed percentages","Share ranges set in Contract Data — different percentages apply to different bands of over/underspend","Benefits to client: cost transparency; contractor motivated to control costs; risk shared; early contractor involvement","Benefits to contractor: actual costs reimbursed (less financial risk); gain share incentive; open-book approach","Adjustment of target via compensation events ensures fairness when scope changes"]},
+
+  {cat:"Procurement Routes", marks:25, q:"Discuss the factors you would take into account when deciding upon a procurement route for a client who needs to build a new factory quickly, with price certainty, while maintaining business continuity.",
+   summary:"Key drivers: speed, price certainty, single responsibility. Design and Build is most suitable — overlaps design/construction, single contract sum, one point of responsibility. Traditional would be too slow.",
+   points:["Time: D&B allows construction to start before design is complete (fast-track) — reduces overall programme","Price certainty: lump sum D&B contract provides a fixed price; client knows maximum exposure early","Single point of responsibility: contractor responsible for design and construction — reduces co-ordination risk","Business continuity: phased handover / sectional completion can be written into the contract","D&B disadvantage: client loses direct design control; contractor may use cheaper specifications","NEC4 Option C alternative: if speed + cost control needed but scope not fully defined","Management contracting: suitable if very urgent start needed but increases client risk","Traditional procurement: unsuitable — sequential design then build extends programme significantly"]},
+
+  {cat:"Framework Agreements", marks:25, q:"Consider the adoption of a framework approach compared to a traditional procurement approach for a public sector body building multiple community hubs across the North West. Which approach would you recommend and why?",
+   summary:"Framework agreements suit repeat public sector clients — save tendering time/cost, build relationships, embed social value. Traditional tendering maximises competition but is slower and costlier to administer for multiple projects.",
+   points:["Framework: pre-selected contractors, pre-agreed terms/rates — avoids re-tendering each project","Speed: call-off contracts quicker to mobilise than full competitive tendering each time","Social value: framework can embed Social Value Act 2012 requirements, local employment targets, sustainability","Consistency: same contractor builds all hubs — lessons learned, continuous improvement, programme efficiency","Traditional: maximises market competition, potentially lowest price per project","Traditional disadvantage: re-tendering 4+ hubs is time-consuming, expensive, and slows delivery","Public sector duty: must evidence value for money — frameworks can do this via pre-qualification and performance monitoring","Recommendation: Crown Commercial Service / Procure frameworks already exist for this type of project","Risk: framework may reduce competition over time; must include performance reviews and benchmarking"]},
+
+  {cat:"Variations & Changes", marks:25, q:"Write a report informing a main contractor what their contractual obligations are when they receive a change instruction from the client during a live project.",
+   summary:"Contractor must comply with the instruction but follow contract procedure: confirm in writing, value the change, assess time impact, notify if a compensation event (NEC4) or apply for EoT (JCT). Do not just absorb the cost.",
+   points:["Instruction must be valid — check it comes from the authorised person (CA under JCT / PM under NEC4)","JCT: only the CA can issue variations under Clause 3.14 — oral instructions must be confirmed in writing","Comply with the instruction — contractor cannot refuse a valid variation instruction","Value the variation: use contract rates where applicable; submit Schedule 2 Quotation if appropriate","Assess time impact — if variation affects critical path, apply for extension of time (JCT Clause 2.28)","NEC4: raise a compensation event notification within 8 weeks (Clause 61.3) — failure bars the claim","NEC4: submit a quotation showing cost and time impact within 3 weeks of PM's instruction (Clause 62)","Record all additional costs and resources deployed to support the claim","Do not absorb costs without contractual entitlement — document everything contemporaneously"]},
+
+  {cat:"Time & Programme", marks:25, q:"Explain the concepts of 'Time at Large' and 'Time is of the Essence' in construction contracts, and identify the contractual provisions for managing time within NEC4 Option A.",
+   summary:"Time at large = no valid completion date, contractor must complete in reasonable time. Time of the essence = completion date fundamental, breach allows termination. NEC4 manages time via Accepted Programme and compensation events.",
+   points:["Time is of the essence: completion date is a fundamental term — breach entitles innocent party to treat contract as repudiated","Standard forms (JCT/NEC4) rarely make time of the essence — they use LDs instead to avoid repudiation for delay","Time at large: arises when client causes delay but no valid EoT mechanism is operated — completion date becomes unenforceable","Consequence of time at large: LDs cannot be deducted; contractor only obliged to complete in reasonable time","NEC4 Option A provisions for time: Accepted Programme (Clause 31) must be submitted and accepted by PM","Programme must show: planned completion, critical path, float, resource loading, method statements","Compensation events (Clause 60): adjust the Completion Date when qualifying events occur — assessed via forecast of impact","Early Warning Notices (Clause 15): both parties must warn of matters affecting time — failure reduces entitlement","Key principle of NEC4: proactive management of time, not reactive claims after the event"]},
+
+  {cat:"JCT Payments & Valuations", marks:25, q:"Explain the concept of materials off-site under JCT SBC/Q 2016 and the safeguards offered to the client. Also calculate the net sum due for an interim payment given the following figures.",
+   summary:"Materials off-site can be certified if uniquely identified, insured, ownership transferred, and bond provided. Interim payment = gross valuation less retention less previous certificates.",
+   points:["JCT Clause 4.17: listed/unlisted items can be paid for before delivery to site","Safeguards for client: items must be uniquely identified (marked/set aside); ownership must have passed to contractor; must be insured; bond or equivalent may be required","Risk to client if not properly protected: insolvency of contractor/supplier before delivery — items may be seized by liquidator","Calculation steps: add measured work + variations + L&E + fluctuations + materials on/off site","Deduct work not in accordance with specification (contra charge)","Apply retention percentage to gross (less previously certified) — typically 3% or 5%","Deduct previously certified amount to give net sum due","Client must pay within the prescribed period (5 days from due date under JCT) — late payment attracts interest"]},
+
+  {cat:"Tender Evaluation", marks:25, q:"An experienced retail client requires advice on their tender evaluation selection procedure for a £4M refurbishment project on a brownfield site. Discuss the factors they may wish to consider in their final choice of contractor.",
+   summary:"Evaluation should balance price with quality, capability, programme, H&S, financial standing, and relevant experience. MEAT approach recommended over lowest price only.",
+   points:["Price: assessed against detailed BoQ or schedule of rates — compare like-for-like; query abnormally low tenders","Technical capability: relevant experience of similar refurbishment projects; examples and references","Programme: proposed construction programme — is it realistic? Does it meet client's trading requirements?","Health and safety: H&S policy, accident frequency rate, method statements, CDM compliance","Financial standing: credit check, accounts review, references — contractor must be financially stable for duration","Key personnel: site manager and contracts manager experience; will they remain on this project?","Supply chain: subcontractor selection process; approved subcontractor lists; payment practices","Sustainability and social value: environmental credentials, local employment","Brownfield considerations: experience of contamination, asbestos, existing services — specialist capability needed","Recommend two-stage assessment: pass/fail on H&S/financial criteria first, then scored evaluation on weighted criteria"]},
+
+  {cat:"FIDIC Contracts", marks:25, q:"Compare the FIDIC Red Book, Yellow Book, and Orange Book — explaining the key differences in design responsibility, risk allocation, and when each is appropriate.",
+   summary:"Red Book: client designs, contractor builds. Yellow Book: contractor designs and builds. Orange Book (EPC/Turnkey): contractor takes full responsibility for design, build, and commissioning — maximum risk transfer.",
+   points:["FIDIC Red Book (Construction): employer provides design; contractor constructs to employer's requirements; traditional procurement internationally","FIDIC Yellow Book (Plant & Design-Build): contractor designs and builds; suitable for mechanical/electrical plant or building projects where contractor design is appropriate","FIDIC Orange Book / Silver Book (EPC/Turnkey): contractor takes full responsibility — design, build, commission, and deliver a fully operational facility for a fixed price","Risk allocation: Red Book = balanced risk sharing; Yellow Book = more risk to contractor; Orange/Silver Book = maximum risk transfer to contractor","Engineer's role: present in Red and Yellow Book; reduced role in Silver Book (employer administers directly)","DAAB (Dispute Avoidance/Adjudication Board): introduced in FIDIC 2017 — standing panel that monitors project and resolves disputes","Appropriate use: Red = publicly funded civil/building; Yellow = complex plant/PPP; Silver = power stations, process plants requiring certainty of final cost"]}
+];
+
+let examDeck=[], eIdx=0, eStrong=0, ePartial=0, eWeak=0, examFilter='All', timerInt=null, timerSecs=300;
+
+function buildExamCatBtns(){
+  const cats=[...new Set(EQ.map(q=>q.cat))];
+  const sel=document.getElementById('exam-cat-sel');
+  sel.innerHTML='<button class="exam-cat-btn sel" data-ecat="All" onclick="setExamCat(this)">All topics</button>';
+  cats.forEach(cat=>{
+    const b=document.createElement('button');
+    b.className='exam-cat-btn';b.dataset.ecat=cat;
+    b.textContent=cat;b.onclick=function(){setExamCat(this);};
+    sel.appendChild(b);
+  });
+}
+
+function setExamCat(btn){
+  document.querySelectorAll('.exam-cat-btn').forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');
+  examFilter=btn.dataset.ecat;
+}
+
+function startExam(){
+  examDeck=examFilter==='All'?[...EQ]:EQ.filter(q=>q.cat===examFilter);
+  for(let i=examDeck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[examDeck[i],examDeck[j]]=[examDeck[j],examDeck[i]];}
+  eIdx=0;eStrong=0;ePartial=0;eWeak=0;
+  document.getElementById('exam-intro').style.display='none';
+  document.getElementById('exam-score-box').style.display='none';
+  document.getElementById('exam-q-wrap').style.display='block';
+  loadExamQ();
+}
+
+function loadExamQ(){
+  if(eIdx>=examDeck.length){showExamScore();return;}
+  const q=examDeck[eIdx];
+  document.getElementById('eq-cat').textContent=q.cat;
+  document.getElementById('eq-num').textContent=(eIdx+1)+' / '+examDeck.length;
+  document.getElementById('eq-text').textContent=q.q;
+  document.getElementById('eq-marks').textContent=q.marks+' marks';
+  document.getElementById('eq-textarea').value='';
+  document.getElementById('exam-model').style.display='none';
+  document.getElementById('epf').style.width=(eIdx/examDeck.length*100)+'%';
+  startTimer();
+}
+
+function startTimer(){
+  clearInterval(timerInt);
+  timerSecs=300;
+  updateTimerDisplay();
+  timerInt=setInterval(()=>{
+    timerSecs--;
+    updateTimerDisplay();
+    if(timerSecs<=0){clearInterval(timerInt);}
+  },1000);
+}
+
+function updateTimerDisplay(){
+  const m=Math.floor(timerSecs/60);
+  const s=timerSecs%60;
+  const el=document.getElementById('eq-timer');
+  el.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+  el.className='exam-timer'+(timerSecs<=60?' warn':'');
+}
+
+function revealModel(){
+  clearInterval(timerInt);
+  const q=examDeck[eIdx];
+  document.getElementById('em-text').textContent=q.summary;
+  const pts=document.getElementById('em-pts');
+  pts.innerHTML=q.points.map(p=>'<div class="exam-model-pt"><div class="exam-model-pt-dot"></div><div>'+p+'</div></div>').join('');
+  document.getElementById('exam-model').style.display='block';
+  document.getElementById('exam-model').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function markExam(grade){
+  if(grade==='strong')eStrong++;
+  else if(grade==='partial')ePartial++;
+  else eWeak++;
+  eIdx++;
+  loadExamQ();
+  window.scrollTo({top:document.getElementById('exam').offsetTop-80,behavior:'smooth'});
+}
+
+function skipExamQ(){
+  clearInterval(timerInt);eWeak++;eIdx++;loadExamQ();
+}
+
+function showExamScore(){
+  document.getElementById('exam-q-wrap').style.display='none';
+  document.getElementById('exam-score-box').style.display='block';
+  const total=examDeck.length;
+  const pct=total>0?Math.round(eStrong/total*100):0;
+  document.getElementById('esc-pct').textContent=pct+'%';
+  document.getElementById('esc-strong').textContent=eStrong;
+  document.getElementById('esc-partial').textContent=ePartial;
+  document.getElementById('esc-weak').textContent=eWeak;
+  const tier=pct>=70?'high':pct>=40?'mid':'low';
+  const msgs={high:'Exam ready.',mid:'Getting there.',low:'More practice needed.'};
+  const details={high:'Strong performance — you are covering the key points examiners look for. Keep practising weaker topics.',mid:'Good foundation but some gaps remain. Focus on the topics you marked as partial or weak.',low:'Do not worry — use the "Drill weak topics" button to focus your revision where it counts most.'};
+  document.getElementById('esc-msg').textContent=msgs[tier];
+  document.getElementById('esc-detail').textContent=details[tier];
+  document.getElementById('epf').style.width='100%';
+  document.getElementById('exam-score-box').scrollIntoView({behavior:'smooth'});
+}
+
+function resetExam(mode){
+  clearInterval(timerInt);
+  if(mode==='weak'){
+    examDeck=examDeck.filter((_,i)=>i<eIdx);
+  }
+  document.getElementById('exam-score-box').style.display='none';
+  document.getElementById('exam-intro').style.display='block';
+  eIdx=0;eStrong=0;ePartial=0;eWeak=0;
+}
+
+buildExamCatBtns();
+
 </script>
-</body>
-</html>
