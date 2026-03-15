@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BuildSmart — Construction Procurement</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#f5f0e8;--cream2:#ede8de;--cream3:#e4ddd0;
+  --ink:#1a1814;--ink2:#3d3830;--ink3:#7a7368;--ink4:#b0a898;
+  --gold:#8a6c3a;--gold-l:#c4a46b;
+  --border:rgba(26,24,20,0.1);--border2:rgba(26,24,20,0.18);
+  --know:#3a6b4a;--know-bg:rgba(58,107,74,0.08);
+  --review:#8a4a2a;--review-bg:rgba(138,74,42,0.08);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Montserrat',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);min-height:100vh;overflow-x:hidden}
+
+/* GATE */
+#gate{position:fixed;inset:0;background:var(--ink);z-index:9999;display:flex;align-items:center;justify-content:center;padding:2rem}
+#gate.hidden{display:none}
+.gate-box{width:100%;max-width:340px;text-align:center}
+.gate-wm{font-family:var(--serif);font-size:2.4rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);margin-bottom:.3rem}
+.gate-tl{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:3rem}
+.gate-ln{width:36px;height:1px;background:var(--gold-l);margin:0 auto 2.5rem}
+.gate-lb{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:.75rem}
+.gate-in{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.15);color:var(--cream);font-family:var(--sans);font-size:.88rem;font-weight:300;letter-spacing:.2em;padding:.65rem 0;text-align:center;outline:none;transition:border-color .2s;margin-bottom:2.25rem}
+.gate-in:focus{border-bottom-color:var(--gold-l)}
+.gate-in.err{border-bottom-color:#c0493a;animation:shake .3s ease}
+.gate-in::placeholder{color:rgba(255,255,255,.18)}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.gate-bt{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);font-family:var(--sans);font-size:.6rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;padding:.9rem 2.5rem;cursor:pointer;transition:all .25s}
+.gate-bt:hover{border-color:var(--gold-l);color:var(--gold-l)}
+.gate-er{font-size:.62rem;color:#c0493a;letter-spacing:.1em;margin-top:1rem;min-height:1em}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2.5rem;border-bottom:1px solid var(--border);background:rgba(245,240,232,.94);backdrop-filter:blur(14px)}
+.nav-wm{font-family:var(--serif);font-size:1.25rem;font-weight:300;letter-spacing:.22em;text-transform:uppercase}
+.nav-ls{display:flex;gap:2rem}
+.nav-a{font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink3);text-decoration:none;transition:color .2s}
+.nav-a:hover{color:var(--ink)}
+
+/* HERO */
+.hero{padding:6rem 2.5rem 5rem;text-align:center;border-bottom:1px solid var(--border);animation:fadeUp .7s ease both}
+.eyebrow{font-size:.58rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.75rem}
+h1{font-family:var(--serif);font-size:clamp(3rem,7vw,5.5rem);font-weight:300;line-height:1.0;letter-spacing:.04em;color:var(--ink);margin-bottom:.5rem}
+h1 em{font-style:italic;font-weight:300}
+.hero-rule{width:48px;height:1px;background:var(--gold);margin:2rem auto}
+.hero-sub{font-size:.72rem;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);max-width:400px;margin:0 auto 3.5rem;line-height:2.2}
+.stats{display:flex;justify-content:center;gap:4rem;flex-wrap:wrap}
+.stat-num{font-family:var(--serif);font-size:2.8rem;font-weight:300;color:var(--ink);line-height:1}
+.stat-lb{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink4);margin-top:6px}
+
+/* FILTER */
+.filter-bar{display:flex;align-items:center;padding:0 2.5rem;border-bottom:1px solid var(--border);overflow-x:auto;animation:fadeUp .7s .1s ease both}
+.filter-tag{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink4);white-space:nowrap;padding:1.1rem 0;margin-right:2rem;flex-shrink:0}
+.filter-btn{background:transparent;border:none;border-bottom:2px solid transparent;color:var(--ink3);font-family:var(--sans);font-size:.6rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;padding:1.1rem 1rem;cursor:pointer;transition:all .2s;white-space:nowrap;margin-bottom:-1px}
+.filter-btn:hover{color:var(--ink)}
+.filter-btn.active{color:var(--ink);border-bottom-color:var(--gold)}
+
+/* APP */
+.app{max-width:640px;margin:0 auto;padding:3.5rem 2rem 5rem;animation:fadeUp .7s .15s ease both}
+.prog-wrap{display:flex;align-items:center;gap:1.5rem;margin-bottom:2.5rem}
+.prog-track{flex:1;height:1px;background:var(--border2)}
+.prog-fill{height:100%;background:var(--gold);transition:width .4s ease}
+.prog-lb{font-size:.58rem;letter-spacing:.2em;color:var(--ink4);white-space:nowrap}
+
+/* CARD */
+.scene{perspective:1200px;width:100%;height:280px;cursor:pointer}
+.inner{width:100%;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1);position:relative}
+.inner.flip{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 3rem;text-align:center}
+.front{background:var(--ink);border:1px solid var(--ink)}
+.back{background:var(--cream2);border:1px solid var(--border2);transform:rotateY(180deg)}
+.c-tag{position:absolute;top:1.25rem;left:1.5rem;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase}
+.front .c-tag{color:rgba(200,170,110,.55)}
+.back .c-tag{color:var(--gold)}
+.c-type{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:1.25rem}
+.front .c-type{color:rgba(255,255,255,.22)}
+.back .c-type{color:var(--ink4)}
+.card-q{font-family:var(--serif);font-size:1.5rem;font-weight:300;font-style:italic;line-height:1.45;color:var(--cream)}
+.card-a{font-family:var(--serif);font-size:1.1rem;font-weight:300;line-height:1.75;color:var(--ink2)}
+.flip-hint{position:absolute;bottom:1.2rem;right:1.5rem;font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.18)}
+
+/* CONTROLS */
+.ctrls{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border:1px solid var(--border2);border-top:none;padding:1.25rem 1.5rem;background:var(--cream2)}
+.btn-a{background:transparent;border:none;border-bottom:1px solid transparent;font-family:var(--sans);font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:.5rem 0;cursor:pointer;transition:all .2s}
+.btn-a:disabled{opacity:.2;cursor:not-allowed}
+.btn-k{color:var(--know)}.btn-k:hover:not(:disabled){border-bottom-color:var(--know)}
+.btn-r{color:var(--review)}.btn-r:hover:not(:disabled){border-bottom-color:var(--review)}
+.c-cnt{font-family:var(--serif);font-size:1.05rem;font-weight:300;color:var(--ink3);text-align:center;white-space:nowrap}
+.score-row{display:flex;margin-top:1.25rem;border:1px solid var(--border)}
+.sc{flex:1;padding:.65rem 1rem;font-size:.58rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;text-align:center}
+.sc.k{color:var(--know);background:var(--know-bg);border-right:1px solid var(--border)}
+.sc.r{color:var(--review);background:var(--review-bg)}
+
+/* DONE */
+#done{display:none;text-align:center;padding:4rem 2rem;border:1px solid var(--border2);background:var(--cream2)}
+.done-ey{font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.done-sc{font-family:var(--serif);font-size:6rem;font-weight:300;color:var(--ink);line-height:1;margin-bottom:.25rem}
+.done-sl{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink4);margin-bottom:2rem}
+.done-ru{width:38px;height:1px;background:var(--gold);margin:0 auto 2rem}
+.done-ti{font-family:var(--serif);font-size:1.8rem;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:.75rem}
+.done-su{font-size:.72rem;font-weight:300;letter-spacing:.06em;color:var(--ink3);max-width:380px;margin:0 auto 2.5rem;line-height:2}
+.done-bt{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-d{background:transparent;border:1px solid var(--border2);color:var(--ink2);font-family:var(--sans);font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:.85rem 2rem;cursor:pointer;transition:all .2s}
+.btn-d:hover{background:var(--cream3)}
+.btn-d.pr{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.btn-d.pr:hover{background:var(--ink2)}
+
+/* CATS */
+.cat-s{max-width:880px;margin:0 auto 5rem;padding:0 2rem;animation:fadeUp .7s .2s ease both}
+.s-ey{font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink4);margin-bottom:1.5rem;padding-top:3.5rem;border-top:1px solid var(--border)}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));border:1px solid var(--border)}
+.cat-c{padding:1.75rem 1.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);cursor:pointer;transition:background .2s}
+.cat-c:last-child{border-right:none}
+.cat-c:hover{background:var(--cream2)}
+.cat-cn{font-family:var(--serif);font-size:1.1rem;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:6px}
+.cat-cc{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink4)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-wm{font-family:var(--serif);font-size:1rem;font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3)}
+.foot-tx{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink4)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:600px){
+  nav{padding:1rem 1.25rem}h1{font-size:2.6rem}
+  .hero{padding:4rem 1.5rem 3.5rem}.stats{gap:2.5rem}
+  .app{padding:2.5rem 1rem 4rem}.scene{height:255px}
+  .card-q{font-size:1.2rem}.card-a{font-size:1rem}
+  .filter-bar{padding:0 1.25rem}.cat-s{padding:0 1rem}
+  footer{padding:1.5rem 1.25rem}.done-sc{font-size:4rem}
+  .face{padding:2rem 1.5rem}
+}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="gate-box">
+    <div class="gate-wm">BuildSmart</div>
+    <div class="gate-tl">Construction Professional Series</div>
+    <div class="gate-ln"></div>
+    <div class="gate-lb">Access required</div>
+    <input class="gate-in" id="gi" type="password" placeholder="· · · · · · · · · · · ·" autocomplete="current-password"/>
+    <button class="gate-bt" onclick="chk()">Enter</button>
+    <div class="gate-er" id="ge"></div>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-wm">BuildSmart</div>
+  <div class="nav-ls">
+    <a class="nav-a" href="#study">Study</a>
+    <a class="nav-a" href="#cats">Categories</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">Construction Professional Series</div>
+  <h1>Procurement &amp;<br><em>Administration</em></h1>
+  <div class="hero-rule"></div>
+  <p class="hero-sub">Master the key concepts for construction procurement<br>Flip, test yourself, and track your progress</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-num" id="tc">25</div><div class="stat-lb">Flashcards</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-lb">Categories</div></div>
+    <div class="stat"><div class="stat-num">~10</div><div class="stat-lb">Minutes</div></div>
+  </div>
+</section>
+
+<div class="filter-bar">
+  <div class="filter-tag">Filter</div>
+  <button class="filter-btn active" data-cat="All" onclick="fc(this)">All</button>
+  <button class="filter-btn" data-cat="Procurement basics" onclick="fc(this)">Basics</button>
+  <button class="filter-btn" data-cat="Procurement routes" onclick="fc(this)">Routes</button>
+  <button class="filter-btn" data-cat="Contract types" onclick="fc(this)">Contracts</button>
+  <button class="filter-btn" data-cat="Administration" onclick="fc(this)">Administration</button>
+</div>
+
+<div class="app" id="study">
+  <div class="prog-wrap">
+    <div class="prog-track"><div class="prog-fill" id="pf"></div></div>
+    <div class="prog-lb" id="pl">0 / 25</div>
+  </div>
+
+  <div id="ca">
+    <div class="scene" onclick="fl()">
+      <div class="inner" id="ci">
+        <div class="face front">
+          <span class="c-tag" id="ctf"></span>
+          <div class="c-type">Question</div>
+          <div class="card-q" id="fq"></div>
+          <div class="flip-hint">Tap to reveal</div>
+        </div>
+        <div class="face back">
+          <span class="c-tag" id="ctb"></span>
+          <div class="c-type">Answer</div>
+          <div class="card-a" id="ba"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ctrls">
+      <button class="btn-a btn-r" id="br" onclick="mk('r')" disabled>&#10005; Review again</button>
+      <div class="c-cnt" id="cc"></div>
+      <button class="btn-a btn-k" id="bk" onclick="mk('k')" disabled>&#10003; Got it</button>
+    </div>
+    <div class="score-row">
+      <div class="sc k" id="kc">Got it: 0</div>
+      <div class="sc r" id="rc">Review: 0</div>
+    </div>
+  </div>
+
+  <div id="done">
+    <div class="done-ey">Session complete</div>
+    <div class="done-sc" id="dp"></div>
+    <div class="done-sl">Correct</div>
+    <div class="done-ru"></div>
+    <div class="done-ti" id="dt"></div>
+    <div class="done-su" id="ds"></div>
+    <div class="done-bt">
+      <button class="btn-d pr" onclick="rst()">Start over</button>
+      <button class="btn-d" id="bm" onclick="rvo()">Review missed</button>
+    </div>
+  </div>
+</div>
+
+<div class="cat-s" id="cats">
+  <div class="s-ey">Browse by category</div>
+  <div class="cat-grid" id="cg"></div>
+</div>
+
+<footer>
+  <div class="foot-wm">BuildSmart</div>
+  <div class="foot-tx">Construction Procurement &amp; Administration &copy; 2025</div>
+</footer>
+
+<script>
+const C=[
+  {cat:"Procurement basics",q:"What is procurement in construction?",a:"The process of acquiring goods, services, and works needed to deliver a construction project — including sourcing, tendering, contracting, and purchasing."},
+  {cat:"Procurement basics",q:"What is a Bill of Quantities (BoQ)?",a:"A document listing all the materials, labour, and services required for a project, with quantities, used to price tenders consistently."},
+  {cat:"Procurement basics",q:"What is a tender?",a:"A formal invitation for contractors or suppliers to submit a priced proposal to carry out specified work or supply goods."},
+  {cat:"Procurement basics",q:"What is a framework agreement?",a:"A pre-agreed contract with one or more suppliers establishing terms for future orders, avoiding the need to re-tender every time."},
+  {cat:"Procurement basics",q:"What is a pre-qualification questionnaire (PQQ)?",a:"A document used to assess a contractor's suitability before inviting them to tender, covering financial standing, experience, and capability."},
+  {cat:"Procurement routes",q:"What is traditional (design-bid-build) procurement?",a:"The client appoints a designer first, then separately tenders construction work. Design is complete before building starts."},
+  {cat:"Procurement routes",q:"What is design and build (D&B) procurement?",a:"A single contractor takes responsibility for both design and construction under one contract, giving the client a single point of responsibility."},
+  {cat:"Procurement routes",q:"What is management contracting?",a:"A management contractor is paid a fee to manage and coordinate work packages carried out by trade contractors, with the client holding the risk."},
+  {cat:"Procurement routes",q:"What is a PFI/PPP contract?",a:"Private Finance Initiative / Public-Private Partnership — a long-term arrangement where a private entity finances, builds, and operates a facility for a public client."},
+  {cat:"Procurement routes",q:"What is construction management procurement?",a:"The client directly employs trade contractors and appoints a construction manager (for a fee) to coordinate and manage them, retaining more control."},
+  {cat:"Contract types",q:"What is a lump sum contract?",a:"The contractor agrees to complete the work for a fixed total price. Variations can adjust the final amount."},
+  {cat:"Contract types",q:"What is a cost-plus (reimbursable) contract?",a:"The client pays the contractor's actual costs plus an agreed fee or percentage for profit and overhead."},
+  {cat:"Contract types",q:"What is a GMP contract?",a:"Guaranteed Maximum Price — the contractor takes on cost risk above an agreed ceiling but shares savings if costs come in under it."},
+  {cat:"Contract types",q:"What is a measured (remeasurement) contract?",a:"Work is paid based on actual quantities measured on completion, using agreed rates — common where scope is uncertain at tender."},
+  {cat:"Contract types",q:"What is a target cost contract?",a:"A contract where a target price is set and any over- or under-spend is shared between client and contractor using an agreed pain/gain mechanism."},
+  {cat:"Administration",q:"What is a contract administrator (CA)?",a:"The person (often an architect or engineer) appointed to administer the building contract on behalf of the client — issuing instructions, certificates, and decisions."},
+  {cat:"Administration",q:"What is a variation (or change order)?",a:"An authorised change to the scope, specification, or sequence of works after the contract is signed, which may adjust cost and programme."},
+  {cat:"Administration",q:"What is a valuation in construction?",a:"An assessment of the value of work completed (and materials on site) at a given date, used to calculate interim payments."},
+  {cat:"Administration",q:"What is practical completion (PC)?",a:"The stage when the works are complete for their intended purpose, defects are minor only, and the client takes possession. It triggers key contract events."},
+  {cat:"Administration",q:"What is a defects liability period?",a:"A period after practical completion (typically 6-12 months) during which the contractor must return to fix defects that appear."},
+  {cat:"Administration",q:"What is retention money?",a:"A percentage withheld from each payment to the contractor (typically 3-5%) as security against defects, released after PC and end of the defects period."},
+  {cat:"Administration",q:"What is a performance bond?",a:"A guarantee from a third party (usually an insurer or bank) to pay the client a sum if the contractor fails to perform."},
+  {cat:"Administration",q:"What does 'novation' mean in construction?",a:"The transfer of a contract (commonly a designer's appointment) from one party to another — e.g. from client to contractor in a D&B project."},
+  {cat:"Administration",q:"What is liquidated damages (LDs)?",a:"A pre-agreed daily or weekly sum the contractor pays to the client for failing to complete by the contract completion date."},
+  {cat:"Administration",q:"What is an extension of time (EoT)?",a:"A formal mechanism granting the contractor additional time to complete the works due to qualifying events such as client-caused delays or force majeure."}
+];
+
+let deck=[],idx=0,kn=0,rv=0,flip=false,af='All';
+
+function fc(b){document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');af=b.dataset.cat;rst();}
+function sh(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}}
+function bd(){deck=af==='All'?[...C]:C.filter(c=>c.cat===af);sh(deck);document.getElementById('tc').textContent=C.length;}
+
+function ld(){
+  if(idx>=deck.length){sd();return;}
+  const c=deck[idx];
+  document.getElementById('fq').textContent=c.q;
+  document.getElementById('ba').textContent=c.a;
+  document.getElementById('ctf').textContent=c.cat;
+  document.getElementById('ctb').textContent=c.cat;
+  document.getElementById('cc').textContent=(idx+1)+' / '+deck.length;
+  document.getElementById('pf').style.width=(idx/deck.length*100)+'%';
+  document.getElementById('pl').textContent=idx+' / '+deck.length;
+  document.getElementById('ci').classList.remove('flip');
+  document.getElementById('bk').disabled=true;
+  document.getElementById('br').disabled=true;
+  flip=false;
+}
+
+function fl(){if(flip)return;document.getElementById('ci').classList.add('flip');document.getElementById('bk').disabled=false;document.getElementById('br').disabled=false;flip=true;}
+
+function mk(t){
+  if(!flip)return;
+  if(t==='k'){kn++;document.getElementById('kc').textContent='Got it: '+kn;}
+  else{rv++;document.getElementById('rc').textContent='Review: '+rv;}
+  idx++;ld();
+}
+
+function sd(){
+  document.getElementById('ca').style.display='none';
+  document.getElementById('done').style.display='block';
+  const p=deck.length>0?Math.round(kn/deck.length*100):0;
+  document.getElementById('dp').textContent=p+'%';
+  const tier=p>=80?'high':p>=50?'mid':'low';
+  const ti={high:'Exceptional.',mid:'Good progress.',low:'Keep going.'};
+  const su={high:'You have a strong command of this material. Consider filtering a specific category to refine any remaining gaps.',mid:'A solid foundation is forming. A few more passes will lock it in.',low:'Repetition is how mastery is built. Use "Review missed" to focus where it counts.'};
+  document.getElementById('dt').textContent=ti[tier];
+  document.getElementById('ds').textContent=su[tier];
+  document.getElementById('bm').style.display=rv>0?'inline-block':'none';
+  document.getElementById('pf').style.width='100%';
+  document.getElementById('pl').textContent=deck.length+' / '+deck.length;
+}
+
+function rst(){kn=0;rv=0;idx=0;document.getElementById('kc').textContent='Got it: 0';document.getElementById('rc').textContent='Review: 0';document.getElementById('ca').style.display='block';document.getElementById('done').style.display='none';bd();ld();}
+
+function rvo(){
+  deck=C.filter(c=>af==='All'||c.cat===af);sh(deck);deck=deck.slice(0,Math.max(rv,3));
+  kn=0;rv=0;idx=0;document.getElementById('kc').textContent='Got it: 0';document.getElementById('rc').textContent='Review: 0';
+  document.getElementById('ca').style.display='block';document.getElementById('done').style.display='none';ld();
+}
+
+function bcg(){
+  const cats=[...new Set(C.map(c=>c.cat))];
+  document.getElementById('cg').innerHTML=cats.map(cat=>{
+    const n=C.filter(c=>c.cat===cat).length;
+    return `<div class="cat-c" onclick="jf('${cat}')"><div class="cat-cn">${cat}</div><div class="cat-cc">${n} cards</div></div>`;
+  }).join('');
+}
+
+function jf(cat){const b=[...document.querySelectorAll('.filter-btn')].find(x=>x.dataset.cat===cat);if(b){fc(b);window.scrollTo({top:0,behavior:'smooth'});}}
+
+const PW='OsayiDestiny';
+function chk(){
+  const v=document.getElementById('gi').value,i=document.getElementById('gi');
+  if(v===PW){sessionStorage.setItem('bs','1');document.getElementById('gate').classList.add('hidden');}
+  else{i.classList.add('err');document.getElementById('ge').textContent='Incorrect password.';i.value='';setTimeout(()=>i.classList.remove('err'),400);}
+}
+document.getElementById('gi').addEventListener('keydown',e=>{if(e.key==='Enter')chk();});
+if(sessionStorage.getItem('bs')==='1')document.getElementById('gate').classList.add('hidden');
+
+bcg();rst();
+</script>
+</body>
+</html>
