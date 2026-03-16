@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ProcureReady — Construction Procurement &amp; Administration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -49,13 +51,13 @@ body.dark nav{background:rgba(14,15,12,.94)}
 
 /* HERO */
 .hero{padding:6rem 2.5rem 5rem;text-align:center;border-bottom:1px solid var(–border);animation:fadeUp .7s ease both}
-.eyebrow{font-size:.58rem;letter-spacing:.35em;text-transform:uppercase;color:var(–gold);margin-bottom:1.75rem}
-h1{font-family:var(–serif);font-size:clamp(3rem,7vw,5.5rem);font-weight:300;line-height:1.0;letter-spacing:.04em;color:var(–ink);margin-bottom:.5rem}
+.eyebrow{font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(–gold);margin-bottom:2rem;font-weight:500}
+h1{font-family:“Cormorant Garamond”,Georgia,serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:300;line-height:1.0;letter-spacing:.04em;color:var(–ink);margin-bottom:.5rem}
 h1 em{font-style:italic;font-weight:300}
 .hero-rule{width:48px;height:1px;background:var(–gold);margin:2rem auto}
-.hero-sub{font-size:.72rem;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(–ink3);max-width:400px;margin:0 auto 3.5rem;line-height:2.2}
+.hero-sub{font-size:.68rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(–ink3);max-width:400px;margin:0 auto 3.5rem;line-height:2.4}
 .stats{display:flex;justify-content:center;gap:4rem;flex-wrap:wrap}
-.stat-num{font-family:var(–serif);font-size:2.8rem;font-weight:300;color:var(–ink);line-height:1}
+.stat-num{font-family:“Cormorant Garamond”,Georgia,serif;font-size:3rem;font-weight:300;color:var(–ink);line-height:1}
 .stat-lb{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(–ink4);margin-top:6px}
 
 /* FILTER */
@@ -291,8 +293,8 @@ body.dark .gate-box .gate-wm{color:var(–cream)}
 .theme-toggle:hover{border-color:var(–gold);color:var(–gold)}
 
 /* MOBILE BOTTOM NAV */
-.mob-nav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(–cream);border-top:1px solid var(–border2);padding:.5rem 0 calc(.5rem + env(safe-area-inset-bottom));justify-content:space-around}
-.mob-nav-btn{display:flex;flex-direction:column;align-items:center;gap:3px;background:transparent;border:none;cursor:pointer;padding:.4rem .8rem;color:var(–ink3);font-family:var(–sans);font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:color .2s}
+.mob-nav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(–cream2);border-top:1px solid var(–border2);padding:.6rem 0 calc(.6rem + env(safe-area-inset-bottom));justify-content:space-around;backdrop-filter:blur(10px)}
+.mob-nav-btn{display:flex;flex-direction:column;align-items:center;gap:3px;background:transparent;border:none;cursor:pointer;padding:.4rem .8rem;color:var(–ink3);font-family:var(–sans);font-size:.48rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:color .2s;-webkit-tap-highlight-color:transparent}
 .mob-nav-btn:hover,.mob-nav-btn.active{color:var(–gold)}
 .mob-nav-icon{font-size:1.1rem;line-height:1}
 @media(max-width:600px){
@@ -492,8 +494,8 @@ body{background:white;color:black;font-family:Georgia,serif}
 .countdown-unit{text-align:center}
 .countdown-num{font-family:var(–serif);font-size:2rem;font-weight:300;color:var(–accent,#c8f04a);line-height:1}
 .countdown-num.urgent{color:#fb923c}
-.countdown-unit-label{font-size:.5rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:2px}
-.countdown-msg{font-size:.7rem;font-weight:300;color:rgba(255,255,255,.4);letter-spacing:.05em}
+.countdown-unit-label{font-size:.5rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:2px}
+.countdown-msg{font-size:.7rem;font-weight:300;color:rgba(255,255,255,.55);letter-spacing:.05em}
 @media(max-width:600px){.countdown-banner{padding:.85rem 1.25rem}.countdown-num{font-size:1.5rem}.countdown-msg{display:none}}
 
 /* COMPARISON TABLE */
@@ -882,7 +884,12 @@ body{background:white;color:black;font-family:Georgia,serif}
 </div>
 <!-- VIDEO SECTION -->
 <div class="vid-s" id="videos">
-  <div class="section-eyebrow">Video resources</div>
+  <div style="border-top:1px solid var(--border);padding-top:3.5rem;margin-bottom:0">
+    <div class="accordion-hdr" onclick="toggleAccordion('videos-acc')" style="border:1px solid var(--border);padding:1.25rem 1.5rem">
+      <span class="accordion-title">Video resources</span>
+      <span class="accordion-arrow" id="videos-acc-arr">&#9660;</span>
+    </div>
+    <div class="accordion-body" id="videos-acc-body">
   <div class="vid-grid">
     <a class="vid-card" href="https://www.youtube.com/results?search_query=liquidated+damages+construction+contract+UK+explained" target="_blank" rel="noopener">
       <div class="vid-card-topic">Contractual Damages</div>
@@ -985,7 +992,7 @@ body{background:white;color:black;font-family:Georgia,serif}
 <!-- MOBILE BOTTOM NAV -->
 <div class="mob-nav" id="mob-nav">
   <a class="mob-nav-btn" href="#study" onclick="setMobActive(this)">
-    <span class="mob-nav-icon">&#9646;&#9646;</span>Cards
+    <span class="mob-nav-icon">&#9632;&#9632;</span>Cards
   </a>
   <a class="mob-nav-btn" href="#exam" onclick="setMobActive(this)">
     <span class="mob-nav-icon">&#9998;</span>Exam
@@ -1105,10 +1112,13 @@ body{background:white;color:black;font-family:Georgia,serif}
 <!-- COMPARISON TABLE -->
 
 <div class="compare-s" id="compare">
-  <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:3.5rem;margin-bottom:1.5rem">
-    <div class="section-eyebrow" style="border-top:none;padding-top:0;margin-bottom:0">NEC4 vs JCT vs FIDIC — comparison</div>
-  </div>
-  <table class="compare-table">
+  <div style="border-top:1px solid var(--border);padding-top:3.5rem;margin-bottom:1.5rem">
+    <div class="accordion-hdr" onclick="toggleAccordion('compare-acc')" style="border:1px solid var(--border);padding:1.25rem 1.5rem">
+      <span class="accordion-title">NEC4 vs JCT vs FIDIC — comparison</span>
+      <span class="accordion-arrow" id="compare-acc-arr">&#9660;</span>
+    </div>
+    <div class="accordion-body" id="compare-acc-body">
+  <table class="compare-table" style="margin-top:0">
     <thead>
       <tr>
         <th>Feature</th>
